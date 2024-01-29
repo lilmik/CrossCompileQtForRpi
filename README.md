@@ -181,10 +181,10 @@ Binaries will be in $HOME/qt6/host
 copy and paste a few folders from rpi using rsync through SSH. **You should modify the following commands to your needs.**
 ```
 cd ~
-rsync -avzS --rsync-path="sudo rsync" --delete dev@192.168.101.202:/usr/include rpi-sysroot/usr
-rsync -avzS --rsync-path="sudo rsync" --delete dev@192.168.101.202:/lib rpi-sysroot
-rsync -avzS --rsync-path="sudo rsync" --delete dev@192.168.101.202:/usr/lib rpi-sysroot/usr 
-rsync -avzS --rsync-path="sudo rsync" --delete dev@192.168.101.202:/opt/* rpi-sysroot/opt
+rsync -avzS --rsync-path="rsync" --delete dev@192.168.101.202:/usr/include rpi-sysroot/usr
+rsync -avzS --rsync-path="rsync" --delete dev@192.168.101.202:/lib rpi-sysroot
+rsync -avzS --rsync-path="rsync" --delete dev@192.168.101.202:/usr/lib rpi-sysroot/usr 
+rsync -avzS --rsync-path="rsync" --delete dev@192.168.101.202:/opt/* rpi-sysroot/opt
 ```
 Create a file named toolchain.cmake in $HOME/qt6.
 ```
